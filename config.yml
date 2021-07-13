@@ -1,0 +1,29 @@
+my_task:          # Part 1: Task Name
+  # Part 2: Login Information
+  client: deluge
+  host: 127.0.0.1:58846
+  username: pppppp
+  password: Pp123456
+  # Part 3: Strategies Block (Remove Conditions)
+  strategies:
+    strategy1:
+      all_trackers: true
+      seeding_time: 22100
+
+  # Part 4: Decide whether to remove and delete data (optional)
+  delete_data: true
+
+my_task1:          # Part 1: Task Name
+  # Part 2: Login Information
+  client: qbittorrent
+  host: http://127.0.0.1:2017
+  username: pppppp
+  password: Pp123456
+  # Part 3: Strategies Block (Remove Conditions)
+  strategies:
+    strategy1:
+      all_trackers: true
+      seeding_time: 36600
+
+  # Part 4: Decide whether to remove and delete data (optional)
+  delete_data: true
