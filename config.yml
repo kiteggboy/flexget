@@ -3,12 +3,12 @@ templates:
 
   freespace:
     free_space:
-      path: /home/down/down
+      path: /home/pppppp/deluge/download
       space: 10240
 
   de:
     deluge:
-      path: /home/down/down/
+      path: /home/pppppp/deluge/download
       host: localhost
       port: 58846
       username: pppppp
@@ -16,7 +16,7 @@ templates:
 
   qb:
     qbittorrent:
-      path: /home/down/down/
+      path: /home/pppppp/deluge/download
       host: localhost
       port: 2017
       username: pppppp
