@@ -12,7 +12,7 @@ templates:
       host: localhost
       port: 58846
       username: pppppp
-      password: Pp123456
+      password: BB123123
 
   qb:
     qbittorrent:
@@ -20,7 +20,7 @@ templates:
       host: localhost
       port: 2017
       username: pppppp
-      password: Pp123456
+      password: BB123123
 
   size:
     content_size:
