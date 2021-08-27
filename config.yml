@@ -19,7 +19,7 @@ templates:
       path: /home/dddd/deluge/download
       host: localhost
       port: 2017
-      username: pppppp
+      username: dddd
       password: dddd1111
 
   size:
