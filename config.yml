@@ -3,24 +3,24 @@ templates:
 
   freespace:
     free_space:
-      path: /home/pppppp/deluge/download
+      path: /home/dddd/deluge/download
       space: 10240
 
   de:
     deluge:
-      path: /home/pppppp/deluge/download
+      path: /home/dddd/deluge/download
       host: localhost
       port: 58846
-      username: pppppp
-      password: BB123123
+      username: dddd
+      password: dddd1111
 
   qb:
     qbittorrent:
-      path: /home/pppppp/deluge/download
+      path: /home/dddd/deluge/download
       host: localhost
       port: 2017
       username: pppppp
-      password: BB123123
+      password: dddd1111
 
   size:
     content_size:
