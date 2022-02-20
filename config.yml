@@ -8,7 +8,7 @@ templates:
 
   de:
     deluge:
-      path: /home/dddd/deluge/download
+      path: /home/dddd/qbittorrent/download
       host: localhost
       port: 58846
       username: dddd
@@ -16,7 +16,7 @@ templates:
 
   qb:
     qbittorrent:
-      path: /home/dddd/deluge/download
+      path: /home/dddd/qbittorrent/download
       host: localhost
       port: 2017
       username: dddd
@@ -69,6 +69,70 @@ tasks:
     deluge:
       max_up_speed: 50000
 
+  kp:
+    rss:   https://pt.keepfrds.com/torrentrss.php?rows=10&linktype=dl&passkey=02d8c3d9fe5c74d8512cf6741932d9dc
+    seen:
+      fields:
+        - url
+    accept_all: yes
+    template: qb
+    qbittorrent:
+      maxupspeed: 14000
+
+  ob:
+    rss: 
+      url: https://ourbits.club/torrentrss.php?rows=10&passkey=0e232a75db515e675ccd82c1272304f2&https=1&linktype=dl
+      other_fields:
+        - link
+    nexusphp:
+      cookie: 'ourbits_jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPVVJCSVRTIiwiYXVkIjo0OTQ5OCwiaWF0IjoxNjQ1MDE5MTY5LCJqdGkiOiJsUVdXQUV2R3JmbFh6UTJ5QjBCNFZ6ekJjOTA0d204d1VBUGdkZ1B4VnQ5SldMdjYiLCJleHAiOjE2NDc2MTExNjksInNzbCI6dHJ1ZX0.kWZlofQnlkUmwnBdXSuf14lLt3EejRRAaRFaJqkvZuM'  
+      discount: 
+        - free
+        - 2xfree
+    template: qb
+    qbittorrent:
+      maxupspeed: 50000
+
+
+  ttg:
+    rss: 
+      url: https://totheglory.im/putrss.php?par=dnZ2MjgsNDcsNSwxMDUsNDUsNDksMjYsMTA3LDQ2LDEwNCwyOSwxMTAsMTA2LDI3LDQ0LDQzLDQ4LDMzLDMwLDMxLDUxLDUyLDUzLDU0LDEwOCwxMDksNjIsNjMsNjcsNjksNzAsNzMsNzQsNzYsNzUsODcsODgsOTksOTAsNzcsMzIsNTYsODIsODMsNTksNTcsNTgsMTAzLDYwLDEwMSw5MSw4NCw5Miw5Myw5NCw5NXx8fGExYzlhOTNhMjEwNjcxNzA2NjFhMDNkZjc3OTkyYjYweno=&ssl=yes
+      other_fields:
+        - link
+    nexusphp:
+      cookie: 'uid=157353; pass=ddce05c5518025bd89b08b8df793c364; laccess=1645020637; PHPSESSID=u1m7ahtrbs5qkvue7psoisk7j0; __cf_bm=2.REwQrRFvKqtgsXGCILQXjO7W0HYGTzlCGzb9DD5Fs-1645357063-0-AdFN2xKNrN8bPtlxBtnLtHxujVEwl5+EqedMBqcpEHmgS8HP7/w9W6mz0g3lSS+itF5uEWWXe47A7HNQq+3mfx+BrYm+9MC7eIXuKiI3casmMeo9usshG6ojc94Jy7NI4A=='  
+      discount: 
+        - free
+        - 2xfree
+      hr: no
+    template: qb
+    qbittorrent:
+      maxupspeed: 30000
+
+  spring:
+    rss: 
+      url: https://springsunday.net/torrentrss.php?rows=10&linktype=dl&passkey=f46c1a543f7f3db53e018d2d9b1f69ae
+      other_fields:
+        - link
+    nexusphp:
+      cookie: 'SPRINGID=25sd72l1d9vei927aegdoebrpdcqo877bm2ft89igall4edn15vh0oqr0ee7gtqa; __utmz=37122914.1644913623.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=37122914.1796117345.1644913623.1645021802.1645066214.4'  
+      discount: 
+        - free
+        - 2xfree
+    template: de
+    deluge:
+      max_up_speed: 12000
+
+  spring_baozhongqu:
+    rss:   https://springsunday.net/torrentrss.php?rows=10&rescue=1&linktype=dl&passkey=f46c1a543f7f3db53e018d2d9b1f69ae
+    seen:
+      fields:
+        - url
+    accept_all: yes
+    template: de
+    deluge:
+      max_up_speed: 12000
+      
 
 schedules: no
 
