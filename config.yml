@@ -3,8 +3,8 @@ templates:
 
   freespace:
     free_space:
-      path: /home/dddd/deluge/download
-      space: 10240
+      path: /home/dddd/qbittorrent/download
+      space: 102400
 
   de:
     deluge:
@@ -12,7 +12,7 @@ templates:
       host: localhost
       port: 58846
       username: dddd
-      password: dddd1111
+      password: dddd1234
 
   qb:
     qbittorrent:
@@ -20,22 +20,55 @@ templates:
       host: localhost
       port: 2017
       username: dddd
-      password: dddd1111
+      password: dddd1234
 
-  size:
-    content_size:
-      min: 600
-      max: 666666
-      strict: no
+
 
 
 tasks:
-#这玩意儿还用教？
+
+  CHD:
+    rss: 
+      url: https://chdbits.co/torrentrss.php?rows=10&linktype=dl&passkey=23105215e54f55b7fa7a8c3964aa2800
+      other_fields:
+        - link
+    nexusphp:
+      cookie: 'c_secure_ssl=eWVhaA%3D%3D; cf_clearance=a96kmRkFPwI4Q92X8Fg6TnLiGOlIyqZAClGkviBTmyg-1645276920-0-150; c_secure_uid=MTIxMDI5; c_secure_pass=084ed9b04ab70d05c8486c3a09af5e5f; c_secure_tracker_ssl=eWVhaA%3D%3D; c_secure_login=bm9wZQ%3D%3D'  
+      discount: 
+        - free
+    template: qb
+    qbittorrent:
+      maxupspeed: 100000
 
 
-web_server:
-  port: 6566
-  web_ui: yes
+  cat:
+    rss: 
+      url: https://pterclub.com/torrentrss.php?rows=10&linktype=dl&passkey=d72161a514d1aa6d529d741deac369a0
+      other_fields:
+        - link
+    nexusphp:
+      cookie: 'c_secure_uid=MTIxMDg%3D; c_secure_pass=b20004759ad3c01ea4f7641a4e0d2543; c_secure_ssl=eWVhaA%3D%3D; c_secure_tracker_ssl=eWVhaA%3D%3D; c_secure_login=bm9wZQ%3D%3D; PHPSESSID=0g1gjq55chhcuksdtmmoh9jc40'  
+      discount: 
+        - free
+        - 2xfree
+    template: qb
+
+
+
+  U2:
+    rss: 
+      url: https://u2.dmhy.org/torrentrss.php?rows=10&trackerssl=1&passkey=b9175d9f0c4601e4e7eff450803ba5c8&linktype=dl
+      other_fields:
+        - link
+    nexusphp:
+      cookie: 'nexusphp_u2=b4b611b777d0bd6c3b1e40d7341d6834f0ae46aeb60718122ef13bce7c66e94ce570e39abd38ab2f8458b47d4510e765'  
+      discount: 
+        - free
+        - 2xfree
+    template: de
+    deluge:
+      max_up_speed: 50000
+
 
 schedules: no
 
